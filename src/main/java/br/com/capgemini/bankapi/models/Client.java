@@ -38,20 +38,16 @@ public class Client {
 	
 	private String email;
 	
-	@Column(nullable = false, length = 255)
-	private int password;
-	
 	@CreationTimestamp
 	private LocalDateTime createdAt;
 	
 	@UpdateTimestamp
 	private LocalDateTime updatedAt;
 	
-	public Client(String fullName, String cpf, String rg, String email, int password) {
+	public Client(String fullName, String cpf, String rg, String email) {
 		this.fullName = fullName;
 		this.cpf = cpf;
 		this.rg = rg;
 		this.email = email;
-		this.password = password;
 	}
 }
